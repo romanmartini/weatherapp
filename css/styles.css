@@ -1,0 +1,226 @@
+/* ========================= 
+Theme Name: Weather App
+Theme URL: 
+Author: Martini, Román Ariel
+License:
+========================= */
+
+@import url(reset.css);
+@import url(utilities.css);
+
+/* ====================================================  
+// Site styles
+==================================================== */
+
+body{
+    background-image: linear-gradient(180deg, var(--background-primary), var(--background-second)70%);
+}
+/* ====================================================
+// Header
+==================================================== */
+
+.haeder {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    color: var(--text-primary);
+}
+.haeder .container{
+    height: 64px;
+}
+.haeder ul{
+    margin: 0;
+    list-style: none;
+}
+.logo{
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+.haeder a{
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+/* ====================================================
+// Hero
+==================================================== */
+
+.hero{
+    height: 100vh;
+    padding-top: 89.5px;
+    color: var(--text-second);
+}
+
+/* Current Weather 
+==================================================== */
+
+#currentWeather{
+    background-color: white;
+    color: var(--text-color);
+    border-radius: 8px;
+    box-shadow: 0px 1px 8px 2px rgba(61, 61, 61, 0.514);
+}
+@media (max-width: 910px){
+    #currentWeather{
+        margin-right: auto;
+        margin-left: auto ;
+    }
+}
+.box-weather{
+    position: relative;
+    padding: 15px;
+    min-width: 300px;
+}
+
+/* Error Message 
+======================= */
+
+.box-error-message{
+    pointer-events: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.96);
+    top:0;
+    left: 0;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    transform: scale(0,0);
+    transition: all .3s;
+
+}
+.box-error-message.is-active{
+    transform: scale(1,1);
+    pointer-events: painted;
+}
+.closed-message{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    transition: all .5s;
+}
+.closed-message:hover{
+    color: rgb(41, 41, 41);
+}
+.error-message{
+    text-align: center;
+    padding: 15px;
+    height: 100%;
+}
+
+/* Location
+======================= */
+
+#location{
+    position: relative;
+}
+.closed{
+    position: absolute;
+    top: 6px;
+    right: 0;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    transition: all .5s;
+}
+.closed:hover{
+    color: rgb(41, 41, 41);
+}
+.fa-location{
+    vertical-align: sub;
+}
+#city-name{
+    font-size: 2rem;
+    font-weight: 600;
+    padding-right: 32px;
+}
+
+/* Date
+======================= */
+
+#date{
+    font-size: 1.5rem;
+}
+/* temperature */
+.box-temperature > div:first-child{
+    padding-top: 40px;
+    margin-left: 5%;
+}
+#weather-icons{
+    width: 100px;
+}
+#temperature{
+    font-size: 6rem;
+}
+
+/* btn-weather
+======================= */
+
+[class*='btn-weather']{
+    color: var(--text-primary);
+    background-color: #3693b3;
+    padding: 10px 0;
+    width: 45%;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 1px 1px 6px 1px rgba(128, 128, 128, 0.39);
+    cursor: pointer;
+    transition: all .3s;
+}
+[class*='btn-weather']:hover{
+    background-color: #287994;
+}
+
+
+/* Form Weather 
+==================================================== */
+.form-weather{
+    width: max-content;  
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-weather h2{
+    color: var(--text-primary);
+    font-size: 2rem;
+}
+#input-city{
+    border: none;
+    width: 60%;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    padding: 5px 15px;
+}
+#input-submit{
+    border: 2px solid white;
+    margin-left: 3%;
+    width: 35%;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    padding: 5px 15px;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease;
+
+}
+#input-submit:hover{
+    background-color: rgba(255, 255, 255, 0.274);    
+}
+
+
+/* ====================================================
+// Footer
+==================================================== */
+
+footer{
+    padding: 1rem;
+    color: var(--text-primary);
+    height: 30vh;
+    background-color: rgba(68, 68, 68, 0.411);
+}

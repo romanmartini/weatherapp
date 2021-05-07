@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Cplima</title>
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <header class="haeder">
+        <div class="font-h container flex justify-content-between aling-items-center">
+            <div class="logo">weatherapp</div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero container" id="hero">
+            <div class="flex-wrap justify-content-between">
+
+                <!-- Current Weather 
+                ======================== -->
+                <div id="currentWeather">
+                    <div class="box-weather font-h-uc">
+                        <div class="box-error-message">
+                            <div class="closed-message"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"  width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z" fill="currentColor"></path></svg></div>
+                            <div class="error-message flex aling-items-center">
+                                <p class="font-t">Has alcanzado el limite de solicitudes del clima actual (0/250 peticiones por mes). Los datos que se muestran a continuación son ficticios y generados de manera aleatoria.</p>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div id="location">
+                            <div class="closed">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"  width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z" fill="currentColor"></path></svg>
+                            </div>
+                            <svg class="fa-location inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 72 72"><path fill="#666" d="M52.573 29.11c0-9.315-7.133-16.892-15.903-16.892s-15.904 7.577-15.904 16.896c.003.465.224 11.609 12.962 31.245a3.463 3.463 0 0 0 2.817 1.934c1.84 0 3.094-2.026 3.216-2.232C52.58 40.413 52.58 29.553 52.573 29.11zM36.67 35.913a7.083 7.083 0 1 1 7.083-7.082a7.09 7.09 0 0 1-7.083 7.082z"></path><path fill="#666" d="M52.573 29.11c0-9.315-7.133-16.892-15.903-16.892a14.96 14.96 0 0 0-3.865.525c8.395.45 15.1 7.823 15.1 16.85c.006.443.006 11.303-12.813 30.95a5.854 5.854 0 0 1-.586.797a2.855 2.855 0 0 0 2.04.954c1.839 0 3.093-2.027 3.215-2.233C52.58 40.413 52.58 29.553 52.573 29.11z"></path><g fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M36.545 62.294a3.463 3.463 0 0 1-2.817-1.935C20.99 40.723 20.769 29.58 20.766 29.114c0-9.32 7.134-16.896 15.904-16.896s15.903 7.577 15.903 16.892c.007.444.007 11.304-12.812 30.95c-.122.207-1.377 2.233-3.216 2.233z"></path><path d="M36.67 35.913a7.083 7.083 0 1 1 7.083-7.082a7.09 7.09 0 0 1-7.083 7.082z"></path></g></svg>
+                            <p id="city-name" class="inline-block">City, Region</p>
+                        </div>
+                        <hr>
+
+                        <!-- Date -->
+                        <div id="date" class="flex justify-content-between">
+                            <p id="month-day">Date 00</p>
+                            <p><span id="hour">00:00</span> Hs</p>
+                        </div>
+                        <hr>
+    
+                        <!-- Temperature-->
+                        <div class="box-temperature flex justify-content-between pb-4">
+                            <div class="flex column justify-content-between">
+                                <img id="weather-icons" src="" alt="">
+                                <!-- <p id="weather-description" >parcialmente nublado</p> -->
+                                <p>Wind: <span id="wind-speed">0</span>km/h</p>
+                            </div>
+                            <div>
+                                <p id="temperature">00°c</p>
+                                <div class="font-t">
+                                    <p>Humidity: <span id="humidity">0</span>%</p>
+                                    <p>Precip: <span id="precip">0</span>%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- Button-->
+                        <div class="flex justify-content-between pt-3">
+                            <input type="submit" value="Closed" class="btn-weather-closed font-t">
+                            <input type="submit" value="Save" class="btn-weather-save font-t">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Form Weather 
+                ===================== -->
+                <div class="form-weather">
+                    <h2 class="font-h-uc">What is your location?</h1>
+                    <form id="form-city">
+                        <input type="text" id="input-city" placeholder="Enter your city">
+                        <input type="submit" id="input-submit" value="See weather">
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+        
+
+    </main>
+    <footer>
+        <div class="container">
+            <a href="http://www.freepik.com"><strong>Images:</strong> Designed by Freepik</a>
+        </div>
+    </footer>
+    <script src="./js/script.js" type="module"></script>
+</body>
+</html>

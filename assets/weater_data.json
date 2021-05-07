@@ -1,0 +1,16 @@
+{
+    "current" : {
+        "temperature" : "19",
+        "weather_descriptions" : ["party"],
+        "weather_icons" : ["./assets/world.svg"],
+        "humidity" : "80",
+        "precip": "2",
+        "wind_speed" : "5"
+    },
+
+    "location" : {
+        "name" : "Villa María",
+        "region" : "Cordoba",
+        "localtime" : "2021-05-06 11:32"
+    }
+}
